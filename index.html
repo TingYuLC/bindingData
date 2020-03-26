@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <form>
+      <input type="text" v-model="value" />
+      <button type="button" v-click="add">Add</button>
+    </form>
+    <p v-text="value" />
+  </div>
+  <script src="./dep.js"></script>
+  <script src="./observer.js"></script>
+  <script src="./watcher.js"></script>
+  <script src="./complie.js"></script>
+  <script src="./vue.js"></script>
+  <script>
+    window.onload = function () {
+      new Vue({
+        el: '#app',
+        data: {
+          value: 10
+        },
+        methods: {
+          add() {
+            this.value++
+          }
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>
